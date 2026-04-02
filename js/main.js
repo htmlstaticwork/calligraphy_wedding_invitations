@@ -63,6 +63,15 @@ if (hamburger && mobileMenu) {
   });
 }
 
+// ── ACTIVE LINK HIGHLIGHT ──
+const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+document.querySelectorAll('.nav-links a, .mobile-menu a').forEach(link => {
+  const href = link.getAttribute('href');
+  if (href === currentPath) {
+    link.classList.add('active');
+  }
+});
+
 // ── THEME TOGGLE ──
 const themeBtn = document.querySelector('.btn-theme');
 const themeIcon = document.querySelector('.theme-icon');
@@ -175,6 +184,21 @@ window.addEventListener('scroll', () => {
     }
   });
 });
+
+// ── MOVE TO TOP ──
+const moveToTopBtn = document.getElementById('moveToTop');
+if (moveToTopBtn) {
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 400) {
+      moveToTopBtn.classList.add('visible');
+    } else {
+      moveToTopBtn.classList.remove('visible');
+    }
+  });
+  moveToTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
 
 // ── CONTACT FORM ──
 const contactForm = document.querySelector('.contact-form-el');
