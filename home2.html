@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Collections — WedINv</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+.collection-hero{height:100vh;min-height:600px;background-image:url('https://images.unsplash.com/photo-1502635385003-ee1e6a1a742d?w=1600&q=80');background-size:cover;background-position:center;background-attachment:fixed;position:relative;display:flex;align-items:center;justify-content:center;}
+.collection-filters{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:50px;}
+.filter-btn{padding:10px 28px;border:1px solid rgba(var(--accent-rgb),0.3);background:none;color:var(--primary);font-family:var(--font-body);font-size:0.7rem;letter-spacing:0.18em;text-transform:uppercase;cursor:pointer;transition:all 0.3s;}
+.filter-btn:hover,.filter-btn.active{background:var(--accent);color:var(--secondary);border-color:var(--accent);}
+.collection-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.collection-item{position:relative;overflow:hidden;cursor:pointer;}
+.collection-item img{width:100%;height:380px;object-fit:cover;transition:transform 0.6s ease;}
+.collection-item:hover img{transform:scale(1.06);}
+.collection-item-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(var(--primary-rgb),0.85) 0%,transparent 50%);display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding:30px;text-align:center;transform:translateY(20px);transition:transform 0.4s;}
+.collection-item:hover .collection-item-overlay{transform:translateY(0);}
+.collection-item-overlay h3{font-family:var(--font-display);font-size:1.4rem;font-style:italic;color:var(--secondary);margin-bottom:6px;text-align:center;}
+.collection-item-overlay span{font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);text-align:center;}
+.featured-collection{display:grid;grid-template-columns:1fr 1fr;gap:0;margin:60px 0;min-height:500px;}
+.featured-collection-img{background-image:url('https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?w=1200&q=80');background-size:cover;background-position:center;}
+.featured-collection-text{background:var(--primary);color:var(--secondary);padding:80px 60px;display:flex;flex-direction:column;justify-content:center;}
+.featured-collection-text h2{font-family:var(--font-display);font-size:2.6rem;font-weight:300;font-style:italic;margin-bottom:20px;}
+.featured-collection-text p{font-size:0.88rem;opacity:0.7;line-height:1.9;margin-bottom:30px;}
+@media(max-width:768px){.collection-grid{grid-template-columns:repeat(2,1fr);}.featured-collection{grid-template-columns:1fr;}.featured-collection-img{height:300px;}}
+@media(max-width:480px){.collection-grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<div class="page-loader"><div class="loader-text">Collections</div><div class="loader-bar"><div class="loader-fill"></div></div></div>
+<div class="cursor"></div><div class="cursor-follower"></div>
+
+<nav class="navbar">
+  <a href="index.html" class="logo">Wed<span>INv</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="home2.html">Collections</a></li>
+    <li><a href="portfolio.html">Portfolio</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="pricing.html">Pricing</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="nav-controls">
+    <button class="btn-rtl">RTL</button>
+    <button class="btn-theme"><span class="theme-icon">☾</span></button>
+    <button class="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-menu">
+  <a href="index.html">Home</a><a href="home2.html">Collections</a><a href="portfolio.html">Portfolio</a>
+  <a href="services.html">Services</a><a href="pricing.html">Pricing</a><a href="about.html">About</a><a href="contact.html">Contact</a>
+</div>
+
+<!-- SECTION 1: HERO -->
+<div class="collection-hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <span class="hero-eyebrow">✦ 2024 / 2025 Collections</span>
+    <h1>Discover Our <em>Curated</em><br>Stationery Collections</h1>
+    <p>Each collection tells a different love story — find yours</p>
+    <div class="hero-btns">
+      <a href="#collections" class="btn-primary">Browse All</a>
+      <a href="contact.html" class="btn-outline">Custom Order</a>
+    </div>
+  </div>
+  <div class="scroll-down"><span>Explore</span><div class="scroll-line"></div></div>
+</div>
+
+<!-- SECTION 2: COLLECTION GRID -->
+<section id="collections">
+  <div class="section-header reveal">
+    <span class="section-tag">✦ Our Collections</span>
+    <h2 class="section-title">Curated with <em>Love</em></h2>
+    <div class="section-divider"></div>
+  </div>
+  <div class="collection-filters reveal">
+    <button class="filter-btn active">All</button>
+    <button class="filter-btn">Floral</button>
+    <button class="filter-btn">Minimalist</button>
+    <button class="filter-btn">Vintage</button>
+    <button class="filter-btn">Botanical</button>
+  </div>
+  <div class="collection-grid">
+    <div class="collection-item reveal delay-1">
+      <img src="https://images.unsplash.com/photo-1606216794079-73f0f3b51f76?w=800&q=80" alt="Garden Romance">
+      <div class="collection-item-overlay"><h3>Garden Romance</h3><span>Floral Suite</span></div>
+    </div>
+    <div class="collection-item reveal delay-2">
+      <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=800&q=80" alt="Ivory Elegance">
+      <div class="collection-item-overlay"><h3>Ivory Elegance</h3><span>Minimalist Suite</span></div>
+    </div>
+    <div class="collection-item reveal delay-3">
+      <img src="https://images.unsplash.com/photo-1592786855571-c22d47cfe3b2?w=800&q=80" alt="Golden Hour">
+      <div class="collection-item-overlay"><h3>Golden Hour</h3><span>Vintage Suite</span></div>
+    </div>
+    <div class="collection-item reveal delay-2">
+      <img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?w=800&q=80" alt="Botanical Dreams">
+      <div class="collection-item-overlay"><h3>Botanical Dreams</h3><span>Botanical Suite</span></div>
+    </div>
+    <div class="collection-item reveal delay-3">
+      <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=800&q=80" alt="Blush & Gold">
+      <div class="collection-item-overlay"><h3>Blush & Gold</h3><span>Luxury Suite</span></div>
+    </div>
+    <div class="collection-item reveal delay-4">
+      <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=800&q=80" alt="Timeless Classic">
+      <div class="collection-item-overlay"><h3>Timeless Classic</h3><span>Classic Suite</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 3: FEATURED -->
+<div class="featured-collection reveal">
+  <div class="featured-collection-img"></div>
+  <div class="featured-collection-text">
+    <span class="section-tag" style="text-align:left;display:block;margin-bottom:14px">✦ Featured Collection</span>
+    <h2>The <em>Garden Romance</em> Suite</h2>
+    <p>Inspired by English country gardens in full bloom, this suite features hand-painted watercolour florals, letterpress printing on 600gsm cotton paper, and gold foil accents.</p>
+    <p>Includes: Save the Date, Invitation, Details Card, RSVP, Envelope Liners, and Wax Seal.</p>
+    <a href="contact.html" class="btn-primary" style="align-self:flex-start">Enquire Now</a>
+  </div>
+</div>
+
+<!-- SECTION 4: PROCESS -->
+<section>
+  <div class="section-header reveal">
+    <span class="section-tag">✦ How It Works</span>
+    <h2 class="section-title">The <em>Creation</em> Process</h2>
+    <div class="section-divider"></div>
+  </div>
+  <div class="process-steps">
+    <div class="step reveal delay-1"><div class="step-num">01</div><h4>Discover</h4><p>Browse our collections and find your aesthetic direction.</p></div>
+    <div class="step reveal delay-2"><div class="step-num">02</div><h4>Personalise</h4><p>Customise colours, fonts, wording and paper stock.</p></div>
+    <div class="step reveal delay-3"><div class="step-num">03</div><h4>Approve</h4><p>Review digital proofs until every detail is perfect.</p></div>
+    <div class="step reveal delay-4"><div class="step-num">04</div><h4>Receive</h4><p>Beautifully packaged and delivered to your door.</p></div>
+  </div>
+</section>
+
+<!-- SECTION 5: TESTIMONIALS -->
+<section style="background:rgba(var(--accent-rgb),0.05)">
+  <div class="section-header reveal">
+    <span class="section-tag">✦ Client Stories</span>
+    <h2 class="section-title">Voices of <em>Joy</em></h2>
+    <div class="section-divider"></div>
+  </div>
+  <div class="grid-3">
+    <div class="testimonial-card reveal delay-1">
+      <div class="quote-mark">"</div>
+      <p>The Garden Romance suite was everything I dreamed of and more. Every single petal was placed with such care.</p>
+      <span class="author">— Meera & Rohan, 2024</span>
+    </div>
+    <div class="testimonial-card reveal delay-2">
+      <div class="quote-mark">"</div>
+      <p>Our guests thought the invitations were museum pieces. The letterpress texture and gold foil — breathtaking.</p>
+      <span class="author">— Claire & David, 2024</span>
+    </div>
+    <div class="testimonial-card reveal delay-3">
+      <div class="quote-mark">"</div>
+      <p>I cried when I opened the box. WedINv captured exactly who we are as a couple. Pure magic.</p>
+      <span class="author">— Layla & Tariq, 2023</span>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 6: CTA -->
+<div class="cta-section" style="background-image:url('https://images.unsplash.com/photo-1523438885200-e635ba2c371e?w=1600&q=80')">
+  <div class="overlay"></div>
+  <div class="content reveal">
+    <span class="section-tag" style="margin-bottom:16px;display:block">✦ Ready to Begin?</span>
+    <h2>Find Your Perfect <em>Collection</em></h2>
+    <p>From classic to contemporary, botanical to bespoke — we have the perfect starting point for your love story.</p>
+    <div class="hero-btns">
+      <a href="contact.html" class="btn-primary">Start Your Journey</a>
+      <a href="pricing.html" class="btn-outline">View Pricing</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand"><a href="index.html" class="logo">Wed<span>INv</span></a><p>Bespoke wedding stationery crafted with love and artistry.</p>
+    <div class="footer-social"><a href="#" class="social-icon fb">f</a><a href="#" class="social-icon ig">◈</a><a href="#" class="social-icon tw">𝕏</a><a href="#" class="social-icon li">in</a></div></div>
+    <div class="footer-col"><h4>Explore</h4><ul><li><a href="index.html">Home</a></li><li><a href="home2.html">Collections</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="services.html">Services</a></li></ul></div>
+    <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="login.html">Login</a></li></ul></div>
+    <div class="footer-col"><h4>Contact</h4><ul><li><a href="#">hello@wedinv.com</a></li><li><a href="#">+91 98765 43210</a></li><li><a href="#">Chennai, Tamil Nadu</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><span>© 2024 WedINv. All rights reserved.</span><span>Crafted with ♥ for love stories</span></div>
+</footer>
+<script src="js/main.js"></script>
+<script>
+document.querySelectorAll('.filter-btn').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+  });
+});
+</script>
+</body>
+</html>

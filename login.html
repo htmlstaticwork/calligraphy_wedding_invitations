@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Client Login — WedINv</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="page-loader"><div class="loader-text">WedINv</div><div class="loader-bar"><div class="loader-fill"></div></div></div>
+<div class="cursor"></div><div class="cursor-follower"></div>
+
+<div class="auth-page">
+  <!-- VISUAL SIDE -->
+  <div class="auth-visual">
+    <div class="overlay">
+      <a href="index.html" class="logo" style="color:var(--secondary);text-decoration:none;font-family:var(--font-display);font-size:2rem;font-weight:600;margin-bottom:40px;display:block">Wed<span style="color:var(--accent)">INv</span></a>
+      <h2>Welcome Back,<br>Beloved Client</h2>
+      <p>Access your private portal to review proofs, track orders, and communicate with your dedicated stylist.</p>
+      <div style="margin-top:40px;display:flex;flex-direction:column;align-items:center;gap:16px;width:100%;max-width:340px">
+        <div style="display:flex;align-items:center;gap:14px;font-size:0.8rem;opacity:0.75"><span style="color:var(--accent)">✦</span><span>View and approve digital proofs</span></div>
+        <div style="display:flex;align-items:center;gap:14px;font-size:0.8rem;opacity:0.75"><span style="color:var(--accent)">✦</span><span>Track your order progress</span></div>
+        <div style="display:flex;align-items:center;gap:14px;font-size:0.8rem;opacity:0.75"><span style="color:var(--accent)">✦</span><span>Message your designer directly</span></div>
+        <div style="display:flex;align-items:center;gap:14px;font-size:0.8rem;opacity:0.75"><span style="color:var(--accent)">✦</span><span>Download final files securely</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FORM SIDE -->
+  <div class="auth-form-wrap">
+    <div class="auth-form">
+      <h1>Client Portal</h1>
+      <p class="subtitle">Sign in to continue your beautiful journey</p>
+
+      <form onsubmit="handleLogin(event)">
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" placeholder="hello@example.com" required>
+        </div>
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" placeholder="Enter your password" required>
+        </div>
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:28px;font-size:0.78rem">
+          <label style="display:flex;align-items:center;gap:8px;cursor:pointer;text-transform:none;letter-spacing:0">
+            <input type="checkbox" style="width:auto;border:1px solid rgba(var(--accent-rgb),0.4)"> Remember me
+          </label>
+          <a href="#" style="color:var(--accent);font-size:0.75rem">Forgot password?</a>
+        </div>
+        <button type="submit" class="btn-dark" style="width:100%;border:none;cursor:pointer;padding:16px" id="login-btn">Sign In to Portal</button>
+      </form>
+
+      <p style="text-align:center;margin-top:28px;font-size:0.82rem;opacity:0.6">
+        Not a client yet? <a href="contact.html">Begin your journey →</a>
+      </p>
+      <p style="text-align:center;margin-top:12px;font-size:0.78rem;opacity:0.5">
+        <a href="index.html">← Return to Website</a>
+      </p>
+
+      <div style="margin-top:40px;padding-top:28px;border-top:1px solid rgba(var(--accent-rgb),0.2)">
+        <p style="font-size:0.72rem;opacity:0.5;text-align:center;line-height:1.8">Protected by enterprise-grade encryption.<br>Your privacy is sacred to us.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+<script>
+function handleLogin(e) {
+  e.preventDefault();
+  const btn = document.getElementById('login-btn');
+  btn.textContent = 'Signing in...';
+  btn.style.opacity = '0.7';
+  setTimeout(() => {
+    btn.textContent = 'Welcome back! ✦';
+    btn.style.background = '#b8976a';
+    btn.style.opacity = '1';
+  }, 1500);
+}
+</script>
+</body>
+</html>
