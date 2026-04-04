@@ -73,35 +73,41 @@ document.querySelectorAll('.nav-links a, .mobile-menu a').forEach(link => {
 });
 
 // ── THEME TOGGLE ──
-const themeBtn = document.querySelector('.btn-theme');
-const themeIcon = document.querySelector('.theme-icon');
+const themeBtns = document.querySelectorAll('.btn-theme');
+const themeIcons = document.querySelectorAll('.theme-icon');
 const saved = localStorage.getItem('wedinv-theme') || 'light';
 document.documentElement.setAttribute('data-theme', saved);
-if (themeIcon) themeIcon.textContent = saved === 'dark' ? '☀' : '☾';
-if (themeBtn) {
-  themeBtn.addEventListener('click', () => {
+themeIcons.forEach(icon => {
+  icon.textContent = saved === 'dark' ? '☀' : '☾';
+});
+themeBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
     const current = document.documentElement.getAttribute('data-theme');
     const next = current === 'dark' ? 'light' : 'dark';
     document.documentElement.setAttribute('data-theme', next);
     localStorage.setItem('wedinv-theme', next);
-    if (themeIcon) themeIcon.textContent = next === 'dark' ? '☀' : '☾';
+    themeIcons.forEach(icon => {
+      icon.textContent = next === 'dark' ? '☀' : '☾';
+    });
   });
-}
+});
 
 // ── RTL TOGGLE ──
-const rtlBtn = document.querySelector('.btn-rtl');
-if (rtlBtn) {
-  const savedDir = localStorage.getItem('wedinv-dir') || 'ltr';
-  document.documentElement.setAttribute('dir', savedDir);
-  rtlBtn.textContent = savedDir === 'rtl' ? 'LTR' : 'RTL';
-  rtlBtn.addEventListener('click', () => {
+const rtlBtns = document.querySelectorAll('.btn-rtl');
+const savedDir = localStorage.getItem('wedinv-dir') || 'ltr';
+document.documentElement.setAttribute('dir', savedDir);
+rtlBtns.forEach(btn => {
+  btn.textContent = savedDir === 'rtl' ? 'LTR' : 'RTL';
+  btn.addEventListener('click', () => {
     const dir = document.documentElement.getAttribute('dir');
     const newDir = dir === 'rtl' ? 'ltr' : 'rtl';
     document.documentElement.setAttribute('dir', newDir);
     localStorage.setItem('wedinv-dir', newDir);
-    rtlBtn.textContent = newDir === 'rtl' ? 'LTR' : 'RTL';
+    rtlBtns.forEach(b => {
+      b.textContent = newDir === 'rtl' ? 'LTR' : 'RTL';
+    });
   });
-}
+});
 
 // ── SCROLL REVEAL ──
 const revealEls = document.querySelectorAll('.reveal,.reveal-left,.reveal-right');

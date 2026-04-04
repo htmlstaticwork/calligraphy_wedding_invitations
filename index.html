@@ -1,269 +1,344 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light" dir="ltr">
+
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>WedINv — Bespoke Wedding Stationery</title>
-<link rel="stylesheet" href="css/style.css">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%231a1209'/><text y='.75em' x='50%' text-anchor='middle' font-family='serif' font-size='80' fill='%23b8976a' font-style='italic'>W</text></svg>">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>WedINv — Bespoke Wedding Stationery</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%231a1209'/><text y='.75em' x='50%' text-anchor='middle' font-family='serif' font-size='80' fill='%23b8976a' font-style='italic'>W</text></svg>">
 </head>
+
 <body>
 
-<!-- LOADER -->
-<div class="page-loader">
-  <div class="loader-text">WedINv</div>
-  <div class="loader-bar"><div class="loader-fill"></div></div>
-</div>
+  <!-- LOADER -->
+  
 
-<!-- CURSOR -->
-<div class="cursor"></div>
-<div class="cursor-follower"></div>
+  <!-- CURSOR -->
+  <div class="cursor"></div>
+  <div class="cursor-follower"></div>
 
-<!-- NAVBAR -->
-<nav class="navbar">
-  <a href="index.html" class="logo">Wed<span>INv</span></a>
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="home2.html">Home 2</a></li>
-    <li><a href="collections.html">Collections</a></li>
-    <li><a href="portfolio.html">Portfolio</a></li>
-    <li><a href="services.html">Services</a></li>
-    <li><a href="pricing.html">Pricing</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-  <div class="nav-controls">
-    <a href="register.html" class="nav-signup">Sign-up</a>
-    <button class="btn-rtl">RTL</button>
-    <button class="btn-theme"><span class="theme-icon">☾</span></button>
-    <button class="hamburger" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</nav>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a href="index.html" class="logo">
+      <svg viewBox="0 0 100 100" class="logo-svg" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+        <path d="M20 80 Q 40 20 50 50 Q 60 80 80 20" />
+      </svg>
+      Wed<span>Inv</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="collections.html">Home 2</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-controls">
+      <a href="login.html" class="nav-login">Login</a>
+      <button class="btn-rtl">RTL</button>
+      <button class="btn-theme"><span class="theme-icon">☾</span></button>
+      <button class="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
 
-<!-- MOBILE MENU -->
-<div class="mobile-menu">
-  <a href="index.html">Home</a>
-  <a href="home2.html">Home 2</a>
-  <a href="collections.html">Collections</a>
-  <a href="portfolio.html">Portfolio</a>
-  <a href="services.html">Services</a>
-  <a href="pricing.html">Pricing</a>
-  <a href="about.html">About</a>
-  <a href="contact.html">Contact</a>
-  <a href="register.html" style="font-size: 1.5rem; margin-top: 20px; color: var(--accent);">Sign-up</a>
-</div>
-
-<!-- SECTION 1: HERO -->
-<section class="hero" style="background-image:url('hero_stationery_1_png_1775140443268.png')">
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <span class="hero-eyebrow">✦ Bespoke Wedding Stationery ✦</span>
-    <h1>Where Every <em>Love Story</em><br>Begins with Paper</h1>
-    <p>Hand-crafted invitation suites, place cards & wedding paper goods<br>designed with grace and timeless elegance</p>
-    <div class="hero-btns">
-      <a href="portfolio.html" class="btn-primary">View Portfolio</a>
-      <a href="contact.html" class="btn-outline">Begin Your Story</a>
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="collections.html">Home 2</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="services.html">Services</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="contact.html">Contact</a>
+    <div class="mobile-controls">
+      <div class="mobile-btns-row">
+        <button class="btn-rtl">RTL</button>
+        <button class="btn-theme"><span class="theme-icon">☾</span></button>
+      </div>
+      <a href="login.html" class="nav-login">Login</a>
     </div>
   </div>
-  <div class="scroll-down">
-    <span>Scroll</span>
-    <div class="scroll-line"></div>
-  </div>
-</section>
 
-<!-- SECTION 2: SERVICES -->
-<section style="background:var(--secondary)">
-  <div class="section-header reveal">
-    <span class="section-tag">✦ What We Create</span>
-    <h2 class="section-title">Our <em>Artisan</em> Services</h2>
-    <div class="section-divider"></div>
-  </div>
-  <div class="grid-3">
-    <div class="card reveal delay-1">
-      <div class="card-icon ring-icon">💌</div>
-      <h3>Invitation Suites</h3>
-      <p>Complete bespoke collections including save-the-dates, invitations, RSVP cards and envelope liners crafted to perfection.</p>
-      <a href="services.html" style="margin-top:20px;font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);text-decoration:none;border-bottom:1px solid var(--accent);padding-bottom:2px;">Explore →</a>
-    </div>
-    <div class="card reveal delay-2">
-      <div class="card-icon">🎴</div>
-      <h3>Place Cards</h3>
-      <p>Elegant calligraphy place cards, escort cards and table numbers that elevate your reception tablescape.</p>
-      <a href="services.html" style="margin-top:20px;font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);text-decoration:none;border-bottom:1px solid var(--accent);padding-bottom:2px;">Explore →</a>
-    </div>
-    <div class="card reveal delay-3">
-      <div class="card-icon">✒️</div>
-      <h3>Hand Calligraphy</h3>
-      <p>Artisan hand-lettered envelopes, vow books and custom signage that adds an irreplaceable personal touch.</p>
-      <a href="services.html" style="margin-top:20px;font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);text-decoration:none;border-bottom:1px solid var(--accent);padding-bottom:2px;">Explore →</a>
-    </div>
-  </div>
-</section>
-
-<!-- SECTION 3: ABOUT -->
-<section style="background:var(--primary);color:var(--secondary);padding:100px 60px">
-  <div class="about-split">
-    <div class="about-img-wrap reveal-left">
-      <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=800&q=80" alt="Stationer at work">
-      <div class="about-img-badge">
-        <span>10+</span>
-        <span>Years of Grace</span>
+  <!-- SECTION 1: HERO -->
+  <section class="hero"
+    style="background-image:url('https://akshitphotography.com/wp-content/uploads/2023/08/1-1-scaled.jpg')">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="hero-eyebrow">✦ Bespoke Wedding Stationery ✦</span>
+      <h1>Where Every <em>Love Story</em><br>Begins with Paper</h1>
+      <p>Hand-crafted invitation suites, place cards & wedding paper goods<br>designed with grace and timeless elegance
+      </p>
+      <div class="hero-btns">
+        <a href="portfolio.html" class="btn-primary">View Portfolio</a>
+        <a href="contact.html" class="btn-outline">Begin Your Story</a>
       </div>
     </div>
-    <div class="about-text reveal-right">
-      <span class="section-tag">✦ Our Story</span>
-      <h2 style="color:var(--secondary)">Crafting <em>Memories</em><br>Before They Happen</h2>
-      <p style="opacity:0.7">Born from a love of fine paper and exquisite penmanship, WedINv has been creating bespoke wedding stationery for couples who believe that every detail matters.</p>
-      <p style="opacity:0.7">Each suite is a collaboration — we listen to your story, draw inspiration from your vision, and translate it into paper heirlooms that will be treasured for generations.</p>
-      <ul class="about-features" style="text-align:center;width:100%;max-width:400px">
-        <li style="color:var(--secondary);justify-content:center">Fully custom design process</li>
-        <li style="color:var(--secondary);justify-content:center">Finest Italian & Japanese papers</li>
-        <li style="color:var(--secondary);justify-content:center">Hand calligraphy by certified artists</li>
-        <li style="color:var(--secondary);justify-content:center">Worldwide shipping available</li>
-      </ul>
-      <a href="about.html" class="btn-primary">Our Story</a>
+    <div class="scroll-down">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- SECTION 4: FEATURES / HIGHLIGHTS -->
-<section>
-  <div class="section-header reveal">
-    <span class="section-tag">✦ Why Choose Us</span>
-    <h2 class="section-title">The WedINv <em>Difference</em></h2>
-    <div class="section-divider"></div>
-  </div>
-  <div class="process-steps reveal">
-    <div class="step delay-1">
-      <div class="step-num">01</div>
-      <h4>Consultation</h4>
-      <p>A personal meeting to understand your vision, palette, and wedding aesthetic.</p>
+  <!-- SECTION 2: SERVICES -->
+  <section style="background:var(--secondary)">
+    <div class="section-header reveal">
+      <span class="section-tag">✦ What We Create</span>
+      <h2 class="section-title">Our <em>Artisan</em> Services</h2>
+      <div class="section-divider"></div>
     </div>
-    <div class="step delay-2">
-      <div class="step-num">02</div>
-      <h4>Design</h4>
-      <p>Our artists create bespoke concepts exclusively for your celebration.</p>
-    </div>
-    <div class="step delay-3">
-      <div class="step-num">03</div>
-      <h4>Refinement</h4>
-      <p>Two rounds of revisions to ensure every detail is absolutely perfect.</p>
-    </div>
-    <div class="step delay-4">
-      <div class="step-num">04</div>
-      <h4>Delivery</h4>
-      <p>Hand-packed in keepsake boxes, delivered to your door worldwide.</p>
-    </div>
-  </div>
-</section>
-
-<!-- STATS -->
-<div class="stats-bar">
-  <div class="stat-item reveal delay-1">
-    <span class="stat-num">850+</span>
-    <span class="stat-label">Couples Served</span>
-  </div>
-  <div class="stat-item reveal delay-2">
-    <span class="stat-num">40</span>
-    <span class="stat-label">Countries Worldwide</span>
-  </div>
-  <div class="stat-item reveal delay-3">
-    <span class="stat-num">10+</span>
-    <span class="stat-label">Years of Artistry</span>
-  </div>
-  <div class="stat-item reveal delay-4">
-    <span class="stat-num">99%</span>
-    <span class="stat-label">Happy Clients</span>
-  </div>
-</div>
-
-<!-- SECTION 5: TESTIMONIALS -->
-<section>
-  <div class="section-header reveal">
-    <span class="section-tag">✦ Love Notes</span>
-    <h2 class="section-title">What <em>Couples</em> Say</h2>
-    <div class="section-divider"></div>
-  </div>
-  <div class="grid-3">
-    <div class="testimonial-card reveal delay-1">
-      <div class="quote-mark">"</div>
-      <p>Every guest commented on our invitations. WedINv turned our vision into something far more beautiful than we imagined. Truly a work of art.</p>
-      <span class="author">— Priya & Arjun, Mumbai 2024</span>
-    </div>
-    <div class="testimonial-card reveal delay-2">
-      <div class="quote-mark">"</div>
-      <p>The attention to detail is unmatched. From the envelope liners to the wax seals, every piece felt like a tiny treasure. Our guests still talk about it.</p>
-      <span class="author">— Sophie & James, London 2024</span>
-    </div>
-    <div class="testimonial-card reveal delay-3">
-      <div class="quote-mark">"</div>
-      <p>Working with WedINv was the most joyful part of our wedding planning. They understood our story and poured it into every single detail.</p>
-      <span class="author">— Anika & Omar, Dubai 2023</span>
-    </div>
-  </div>
-</section>
-
-<!-- REMOVED CTA UNWANTED SECTION -->
-
-<!-- FOOTER -->
-<footer>
-  <div class="footer-grid">
-    <div class="footer-brand">
-      <a href="index.html" class="logo">Wed<span>INv</span></a>
-      <p>Bespoke wedding stationery crafted with love and artistry. Every couple deserves paper that tells their story.</p>
-      <div class="footer-social">
-        <a href="#" class="social-icon fb" title="Facebook">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4v-8.5z"/></svg>
-        </a>
-        <a href="#" class="social-icon ig" title="Instagram">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.334 3.608 1.31.975.975 1.247 2.242 1.31 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.334 2.633-1.31 3.608-.975.975-2.242 1.247-3.608 1.31-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.334-3.608-1.31-.975-.975-1.247-2.242-1.31-3.608-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.062-1.366.334-2.633 1.31-3.608.975-.975 2.242-1.247 3.608-1.31 1.266-.058 1.646-.07 4.85-.07zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12s.014 3.667.072 4.947c.2 4.352 2.612 6.765 6.965 6.965 1.28.058 1.688.072 4.947.072s3.667-.014 4.947-.072c4.352-.2 6.765-2.612 6.965-6.965.058-1.28.072-1.688.072-4.947s-.014-3.667-.072-4.947c-.2-4.354-2.612-6.768-6.965-6.965C15.667.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-        </a>
-        <a href="#" class="social-icon tw" title="Twitter/X">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-        </a>
-        <a href="#" class="social-icon li" title="LinkedIn">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 11.002-4.125 2.062 2.062 0 01-.002 4.125zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-        </a>
+    <div class="grid-3">
+      <div class="card reveal delay-1">
+        <div class="card-img-container">
+          <img src="https://i0.wp.com/www.georgiaartwork.com/wp-content/uploads/2023/09/Tuscan-Wedding-Invitation-Suite.png?fit=2200%2C2800&ssl=1" alt="Invitation Suites" class="card-img">
+          <div class="card-icon ring-icon">💌</div>
+        </div>
+        <div class="card-content">
+          <h3>Invitation Suites</h3>
+          <p>Complete bespoke collections including save-the-dates, invitations, RSVP cards and envelope liners crafted to perfection.</p>
+          <a href="services.html" style="margin-top:20px;font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);text-decoration:none;border-bottom:1px solid var(--accent);padding-bottom:2px;">Explore →</a>
+        </div>
+      </div>
+      <div class="card reveal delay-2">
+        <div class="card-img-container">
+          <img src="https://m.media-amazon.com/images/I/810Pv5kqF6L.jpg" alt="Place Cards"
+            class="card-img">
+          <div class="card-icon">🎴</div>
+        </div>
+        <div class="card-content">
+          <h3>Place Cards</h3>
+          <p>Elegant calligraphy place cards, escort cards and table numbers that elevate your reception tablescape.</p>
+          <a href="services.html" style="margin-top:20px;font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);text-decoration:none;border-bottom:1px solid var(--accent);padding-bottom:2px;">Explore →</a>
+        </div>
+      </div>
+      <div class="card reveal delay-3">
+        <div class="card-img-container">
+          <img src="https://www.invitesandco.com/wp-content/uploads/2017/11/DSC_1772.jpg" alt="Hand Calligraphy"
+            class="card-img">
+          <div class="card-icon">✒️</div>
+        </div>
+        <div class="card-content">
+          <h3>Hand Calligraphy</h3>
+          <p>Artisan hand-lettered envelopes, vow books and custom signage that adds an irreplaceable personal touch.</p>
+          <a href="services.html" style="margin-top:20px;font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);text-decoration:none;border-bottom:1px solid var(--accent);padding-bottom:2px;">Explore →</a>
+        </div>
       </div>
     </div>
-    <div class="footer-col">
-      <h4>Explore</h4>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="home2.html">Collections</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="pricing.html">Pricing</a></li>
-      </ul>
+  </section>
+
+  <!-- SECTION 3: ABOUT -->
+  <section style="background:var(--primary);color:var(--secondary);padding:100px 60px">
+    <div class="about-split">
+      <div class="about-img-wrap reveal-left">
+        <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=800&q=80" alt="Stationer at work">
+        <div class="about-img-badge">
+          <span>10+</span>
+          <span>Years of Grace</span>
+        </div>
+      </div>
+      <div class="about-text reveal-right">
+        <span class="section-tag">✦ Our Story</span>
+        <h2 style="color:var(--secondary)">Crafting <em>Memories</em><br>Before They Happen</h2>
+        <p style="opacity:0.7">Born from a love of fine paper and exquisite penmanship, WedINv has been creating bespoke
+          wedding stationery for couples who believe that every detail matters.</p>
+        <p style="opacity:0.7">Each suite is a collaboration — we listen to your story, draw inspiration from your
+          vision, and translate it into paper heirlooms that will be treasured for generations.</p>
+        <ul class="about-features" style="text-align:center;width:100%;max-width:400px">
+          <li style="color:var(--secondary);justify-content:center">Fully custom design process</li>
+          <li style="color:var(--secondary);justify-content:center">Finest Italian & Japanese papers</li>
+          <li style="color:var(--secondary);justify-content:center">Hand calligraphy by certified artists</li>
+          <li style="color:var(--secondary);justify-content:center">Worldwide shipping available</li>
+        </ul>
+        <a href="about.html" class="btn-primary">Our Story</a>
+      </div>
     </div>
-    <div class="footer-col">
-      <h4>Company</h4>
-      <ul>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="login.html">Client Login</a></li>
-        <li><a href="#">FAQs</a></li>
-      </ul>
+  </section>
+
+  <!-- SECTION 4: FEATURES / HIGHLIGHTS -->
+  <section>
+    <div class="section-header reveal">
+      <span class="section-tag">✦ Why Choose Us</span>
+      <h2 class="section-title">The WedINv <em>Difference</em></h2>
+      <div class="section-divider"></div>
     </div>
-    <div class="footer-col">
-      <h4>Contact</h4>
-      <ul>
-        <li><a href="#">hello@wedinv.com</a></li>
-        <li><a href="#">+91 98765 43210</a></li>
-        <li><a href="#">Chennai, Tamil Nadu</a></li>
-        <li><a href="#">Mon–Sat, 10am–6pm</a></li>
-      </ul>
+    <div class="process-steps reveal">
+      <div class="step delay-1">
+        <div class="card-img-container" style="height:150px;margin-bottom:20px">
+          <img src="https://www.shutterstock.com/image-vector/refined-wedding-invitation-set-soft-260nw-2663392257.jpg" alt="Consultation" class="card-img">
+        </div>
+        <div class="step-num">01</div>
+        <h4>Consultation</h4>
+        <p>A personal meeting to understand your vision, palette, and wedding aesthetic.</p>
+      </div>
+      <div class="step delay-2">
+        <div class="card-img-container" style="height:150px;margin-bottom:20px">
+          <img src="https://cdn.dribbble.com/userupload/30674858/file/original-0804022e1e38555b031ab8febc0c9f65.jpg?format=webp&resize=400x300&vertical=center" alt="Design" class="card-img">
+        </div>
+        <div class="step-num">02</div>
+        <h4>Design</h4>
+        <p>Our artists create bespoke concepts exclusively for your celebration.</p>
+      </div>
+      <div class="step delay-3">
+        <div class="card-img-container" style="height:150px;margin-bottom:20px">
+          <img src="https://static.vecteezy.com/system/resources/previews/069/877/345/non_2x/refined-luxury-wedding-invitation-template-design-free-psd.png" alt="Refinement" class="card-img">
+        </div>
+        <div class="step-num">03</div>
+        <h4>Refinement</h4>
+        <p>Two rounds of revisions to ensure every detail is absolutely perfect.</p>
+      </div>
+      <div class="step delay-4">
+        <div class="card-img-container" style="height:150px;margin-bottom:20px">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPt2o1kFuk_g83Dy-zSEGl7u6c23WvyYPFRw&s" alt="Delivery" class="card-img">
+        </div>
+        <div class="step-num">04</div>
+        <h4>Delivery</h4>
+        <p>Hand-packed in keepsake boxes, delivered to your door worldwide.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <div class="stats-bar">
+    <div class="stat-item reveal delay-1">
+      <span class="stat-num">850+</span>
+      <span class="stat-label">Couples Served</span>
+    </div>
+    <div class="stat-item reveal delay-2">
+      <span class="stat-num">40</span>
+      <span class="stat-label">Countries Worldwide</span>
+    </div>
+    <div class="stat-item reveal delay-3">
+      <span class="stat-num">10+</span>
+      <span class="stat-label">Years of Artistry</span>
+    </div>
+    <div class="stat-item reveal delay-4">
+      <span class="stat-num">99%</span>
+      <span class="stat-label">Happy Clients</span>
     </div>
   </div>
-  <div class="footer-bottom">
-    <span>© 2026 WedINv. All rights reserved.</span>
-    <span>Crafted with ♥ for love stories</span>
-  </div>
-</footer>
 
-<button id="moveToTop" class="move-to-top" title="Go to top">↑</button>
+  <!-- SECTION 5: TESTIMONIALS -->
+  <section>
+    <div class="section-header reveal">
+      <span class="section-tag">✦ Love Notes</span>
+      <h2 class="section-title">What <em>Couples</em> Say</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="grid-3">
+      <div class="testimonial-card reveal delay-1">
+        <div class="testimonial-top">
+          <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop" alt="Priya & Arjun"
+            class="testimonial-avatar">
+          <div class="quote-mark">"</div>
+        </div>
+        <p>Every guest commented on our invitations. WedINv turned our vision into something far more beautiful than we
+          imagined. Truly a work of art.</p>
+        <span class="author">— Priya & Arjun, Mumbai 2024</span>
+      </div>
+      <div class="testimonial-card reveal delay-2">
+        <div class="testimonial-top">
+          <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop"
+            alt="Sophie & James" class="testimonial-avatar">
+          <div class="quote-mark">"</div>
+        </div>
+        <p>The attention to detail is unmatched. From the envelope liners to the wax seals, every piece felt like a tiny
+          treasure. Our guests still talk about it.</p>
+        <span class="author">— Sophie & James, London 2024</span>
+      </div>
+      <div class="testimonial-card reveal delay-3">
+        <div class="testimonial-top">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop"
+            alt="Anika & Omar" class="testimonial-avatar">
+          <div class="quote-mark">"</div>
+        </div>
+        <p>Working with WedINv was the most joyful part of our wedding planning. They understood our story and poured it
+          into every single detail.</p>
+        <span class="author">— Anika & Omar, Dubai 2023</span>
+      </div>
+    </div>
+  </section>
 
-<script src="js/main.js"></script>
+  <!-- REMOVED CTA UNWANTED SECTION -->
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <svg viewBox="0 0 100 100" class="logo-svg" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 80 Q 40 20 50 50 Q 60 80 80 20" />
+          </svg>
+          Wed<span>Inv</span>
+        </a>
+        <p>Bespoke wedding stationery crafted with love and artistry. Every couple deserves paper that tells their
+          story.</p>
+        <div class="footer-social">
+          <a href="#" class="social-icon fb" title="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4v-8.5z" />
+            </svg>
+          </a>
+          <a href="#" class="social-icon ig" title="Instagram">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.334 3.608 1.31.975.975 1.247 2.242 1.31 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.334 2.633-1.31 3.608-.975.975-2.242 1.247-3.608 1.31-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.334-3.608-1.31-.975-.975-1.247-2.242-1.31-3.608-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.062-1.366.334-2.633 1.31-3.608.975-.975 2.242-1.247 3.608-1.31 1.266-.058 1.646-.07 4.85-.07zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12s.014 3.667.072 4.947c.2 4.352 2.612 6.765 6.965 6.965 1.28.058 1.688.072 4.947.072s3.667-.014 4.947-.072c4.352-.2 6.765-2.612 6.965-6.965.058-1.28.072-1.688.072-4.947s-.014-3.667-.072-4.947c-.2-4.354-2.612-6.768-6.965-6.965C15.667.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+            </svg>
+          </a>
+          <a href="#" class="social-icon tw" title="Twitter/X">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+            </svg>
+          </a>
+          <a href="#" class="social-icon li" title="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 11.002-4.125 2.062 2.062 0 01-.002 4.125zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="home2.html">Collections</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="login.html">Client Login</a></li>
+          <li><a href="#">FAQs</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="#">hello@wedinv.com</a></li>
+          <li><a href="#">+91 98765 43210</a></li>
+          <li><a href="#">Chennai, Tamil Nadu</a></li>
+          <li><a href="#">Mon–Sat, 10am–6pm</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 WedInv. All rights reserved.</span>
+      <span>Crafted with ♥ for love stories</span>
+    </div>
+  </footer>
+
+  <button id="moveToTop" class="move-to-top" title="Go to top">↑</button>
+
+  <script src="js/main.js"></script>
 </body>
+
 </html>

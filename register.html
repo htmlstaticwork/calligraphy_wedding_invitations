@@ -6,28 +6,22 @@
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<div class="page-loader"><div class="loader-text">WedINv</div><div class="loader-bar"><div class="loader-fill"></div></div></div>
 <div class="cursor"></div><div class="cursor-follower"></div>
 
 <div class="auth-page">
-  <!-- VISUAL SIDE -->
-  <div class="auth-visual">
-    <div class="overlay">
-      <a href="index.html" class="logo" style="margin-bottom:40px;display:block">Wed<span>INv</span></a>
-      <h2>Begin Your<br>Beautiful Journey</h2>
-      <p>Join our exclusive client portal and experience the art of bespoke calligraphy and wedding invitations crafted with love and precision.</p>
-      <div style="margin-top:40px;display:flex;flex-direction:column;align-items:center;gap:16px;width:100%;max-width:340px">
-        <div style="display:flex;align-items:center;gap:14px;font-size:0.8rem;opacity:0.75"><span style="color:var(--accent)">✦</span><span>Personalized design consultation</span></div>
-        <div style="display:flex;align-items:center;gap:14px;font-size:0.8rem;opacity:0.75"><span style="color:var(--accent)">✦</span><span>Access to exclusive collections</span></div>
-        <div style="display:flex;align-items:center;gap:14px;font-size:0.8rem;opacity:0.75"><span style="color:var(--accent)">✦</span><span>Track your custom orders</span></div>
-        <div style="display:flex;align-items:center;gap:14px;font-size:0.8rem;opacity:0.75"><span style="color:var(--accent)">✦</span><span>Direct designer communication</span></div>
-      </div>
-    </div>
-  </div>
+  
 
   <!-- FORM SIDE -->
   <div class="auth-form-wrap">
     <div class="auth-form">
+      <div style="display:flex;justify-content:center;margin-bottom:32px">
+        <a href="index.html" class="logo">
+          <svg viewBox="0 0 100 100" class="logo-svg" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 80 Q 40 20 50 50 Q 60 80 80 20" />
+          </svg>
+          Wed<span>Inv</span>
+        </a>
+      </div>
       <h1>Create Account</h1>
       <p class="subtitle">Join our exclusive client community</p>
 
@@ -72,15 +66,33 @@
         <button type="submit" class="btn-dark" style="width:100%;border:none;cursor:pointer;padding:16px" id="register-btn">Create Account</button>
       </form>
 
-      <p style="text-align:center;margin-top:40px;font-size:0.82rem;opacity:0.6">
+      <div class="social-auth">
+        <span class="social-auth-label">— or sign up with —</span>
+        <div class="social-auth-btns">
+          <button class="social-btn" title="Sign up with Google">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+              <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+              <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+              <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+            </svg>
+          </button>
+          <button class="social-btn" title="Sign up with Email">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2z" fill="#EA4335" opacity="0.1"/>
+              <path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2l10 6 10-6z" fill="#EA4335"/>
+              <path d="M2 6v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6l-10 6L2 6z" fill="#C5221F"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <p style="text-align:center;margin-top:32px;font-size:0.82rem;opacity:0.6">
         Already have an account? <a href="login.html">Sign in →</a>
       </p>
-      <p style="text-align:center;margin-top:12px;font-size:0.78rem;opacity:0.5">
-        <a href="index.html">← Return to Website</a>
-      </p>
+      
 
       <div style="margin-top:40px;padding-top:28px;border-top:1px solid rgba(var(--accent-rgb),0.2)">
-        <p style="font-size:0.72rem;opacity:0.5;text-align:center;line-height:1.8">Your information is protected by enterprise-grade encryption.<br>We respect your privacy and never share your data.</p>
       </div>
     </div>
   </div>
