@@ -162,15 +162,22 @@ body {
   transition: color 0.3s;
 }
 
-.nav-links a.active {
+.nav-links a.active,
+.mobile-menu a.active {
   color: var(--accent);
 }
 
-.nav-links a.active::after {
+.nav-links a.active::after,
+.mobile-menu a.active::after {
   width: 100%;
 }
 
 .nav-links a:hover {
+  color: var(--accent);
+}
+
+.nav-links a:hover,
+.mobile-menu a.active {
   color: var(--accent);
 }
 
@@ -239,9 +246,13 @@ body {
 }
 
 .btn-rtl {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   background: none;
   border: 1px solid rgba(var(--accent-rgb), 0.4);
-  padding: 6px 14px;
+  padding: 6px 18px;
   border-radius: 2px;
   font-size: 0.7rem;
   letter-spacing: 0.1em;
@@ -299,11 +310,13 @@ body {
   z-index: 999;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 32px;
+  justify-content: flex-start;
+  padding-top: 120px;
+  gap: 24px;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.4s;
+  overflow-y: auto;
 }
 
 .mobile-menu.open {
@@ -339,6 +352,7 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  padding-top: 120px; /* Increased offset for fixed navbar */
 }
 
 .hero-overlay {
@@ -354,6 +368,7 @@ body {
   color: #ffffff;
   max-width: 800px;
   padding: 0 30px;
+  margin-top: 80px; /* Push content down further from header */
 }
 
 .hero-eyebrow {
@@ -1974,6 +1989,9 @@ footer {
   .mobile-menu .btn-theme, 
   .mobile-menu .btn-rtl {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     width: 44px;
     height: 44px;
     font-size: 1rem;
@@ -1981,7 +1999,7 @@ footer {
 
   .mobile-menu .btn-rtl {
     width: auto;
-    padding: 0 20px;
+    padding: 0 25px;
   }
 
   section {
