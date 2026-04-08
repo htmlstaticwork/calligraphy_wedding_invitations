@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation | Calligraphy & Wedding Invitations Template</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* 
+        ================================================================
+        GLOBAL STYLES
+        ================================================================
+        */
+        :root {
+            --primary-bg: #0f1113;
+            --secondary-bg: #1a1d21;
+            --accent-color: #d4af37; /* Gold accent */
+            --accent-hover: #b8962e;
+            --text-main: #e0e0e0;
+            --text-muted: #a0a0a0;
+            --border-color: #2a2e33;
+            --sidebar-width: 280px;
+            --header-height: 70px;
+            --card-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--primary-bg);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            color: #fff;
+            margin-bottom: 1rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        code {
+            background: #2d3139;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.9em;
+            color: var(--accent-color);
+        }
+
+        pre {
+            background: #000;
+            padding: 1.5rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 1rem 0;
+            border: 1px solid var(--border-color);
+        }
+
+        /* 
+        ================================================================
+        LAYOUT
+        ================================================================
+        */
+
+        /* Progress Bar */
+        #progress-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: transparent;
+            z-index: 1001;
+        }
+
+        #progress-bar {
+            height: 100%;
+            background: var(--accent-color);
+            width: 0%;
+            transition: width 0.1s ease;
+        }
+
+        /* Header */
+        header {
+            height: var(--header-height);
+            background: var(--secondary-bg);
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 2rem;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-area i {
+            font-size: 1.5rem;
+            color: var(--accent-color);
+        }
+
+        .logo-area span {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+        }
+
+        .header-actions .btn-download {
+            background: var(--accent-color);
+            color: #000;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .header-actions .btn-download:hover {
+            background: var(--accent-hover);
+        }
+
+        /* Main Container */
+        .wrapper {
+            display: flex;
+            margin-top: var(--header-height);
+        }
+
+        /* Sidebar Navigation */
+        aside {
+            width: var(--sidebar-width);
+            height: calc(100vh - var(--header-height));
+            background: var(--secondary-bg);
+            border-right: 1px solid var(--border-color);
+            position: fixed;
+            overflow-y: auto;
+            padding: 2rem 1.5rem;
+            transition: var(--transition);
+        }
+
+        .nav-label {
+            display: block;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+            letter-spacing: 1.5px;
+        }
+
+        .nav-menu li {
+            margin-bottom: 0.5rem;
+        }
+
+        .nav-menu a {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 10px 15px;
+            border-radius: 8px;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .nav-menu a i {
+            width: 20px;
+            text-align: center;
+        }
+
+        .nav-menu a:hover, .nav-menu a.active {
+            background: rgba(212, 175, 55, 0.1);
+            color: var(--accent-color);
+        }
+
+        /* Content Area */
+        main {
+            flex: 1;
+            margin-left: var(--sidebar-width);
+            padding: 3rem 4rem;
+            max-width: 1200px;
+        }
+
+        section {
+            padding-top: 2rem;
+            margin-bottom: 5rem;
+        }
+
+        .section-header {
+            margin-bottom: 2.5rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 1rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+        }
+
+        /* 
+        ================================================================
+        COMPONENTS
+        ================================================================
+        */
+
+        .doc-card {
+            background: var(--secondary-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--card-shadow);
+            margin-bottom: 2rem;
+        }
+
+        .info-box {
+            background: rgba(212, 175, 55, 0.05);
+            border-left: 4px solid var(--accent-color);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 12px 15px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        th {
+            color: var(--accent-color);
+            font-weight: 600;
+            background: rgba(255,255,255,0.02);
+        }
+
+        .folder-tree {
+            padding-left: 1.5rem;
+        }
+
+        .folder-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 8px 0;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            background: #2a2e33;
+            color: #fff;
+        }
+
+        .badge-version { background: var(--accent-color); color: #000; }
+
+        /* 
+        ================================================================
+        RESPONSIVE
+        ================================================================
+        */
+
+        @media screen and (max-width: 1024px) {
+            main { padding: 3rem 2rem; }
+        }
+
+        @media screen and (max-width: 768px) {
+            aside {
+                left: -100%;
+                z-index: 1001;
+                width: 100%;
+                height: 100vh;
+                top: 0;
+            }
+            aside.open { left: 0; }
+            main { margin-left: 0; padding: 2rem 1.5rem; }
+            .mobile-toggle { display: block; }
+        }
+
+        @media screen and (max-width: 480px) {
+            .header-actions .btn-download span { display: none; }
+            .section-header h2 { font-size: 1.8rem; }
+        }
+
+        /* 
+        ================================================================
+        PRINT STYLES
+        ================================================================
+        */
+        @media print {
+            aside, header, #progress-container, .mobile-toggle { display: none !important; }
+            body { background: #fff; color: #000; }
+            main { margin-left: 0; padding: 0; max-width: 100%; }
+            .doc-card { border: 1px solid #ddd; box-shadow: none; page-break-inside: avoid; }
+            h1, h2, h3, h4, th { color: #000 !important; }
+            a { color: #000; border-bottom: 1px dotted #000; }
+            .section-header { border-bottom: 2px solid #000; }
+            pre { background: #f5f5f5; border: 1px solid #ddd; color: #333; }
+            .info-box { border: 1px solid #ddd; background: #fafafa; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Scroll Progress Tracker -->
+    <div id="progress-container">
+        <div id="progress-bar"></div>
+    </div>
+
+    <!-- ================= HEADER SECTION ================= -->
+    <header>
+        <div class="logo-area">
+            <i class="fas fa-feather-pointed"></i>
+            <span>ELEGANZA DOCUMENTATION</span>
+        </div>
+        <div class="header-actions">
+            <button class="btn-download" onclick="window.print()">
+                <i class="fas fa-file-pdf"></i>
+                <span>Download as PDF</span>
+            </button>
+        </div>
+    </header>
+
+    <div class="wrapper">
+        <!-- ================= SIDEBAR NAVIGATION ================= -->
+        <aside id="sidebar">
+            <nav>
+                <span class="nav-label">Main Menu</span>
+                <ul class="nav-menu">
+                    <li><a href="#introduction" class="active"><i class="fas fa-info-circle"></i> Introduction</a></li>
+                    <li><a href="#installation"><i class="fas fa-download"></i> Installation</a></li>
+                    <li><a href="#structure"><i class="fas fa-folder-tree"></i> Folder Structure</a></li>
+                    <li><a href="#customization"><i class="fas fa-palette"></i> Customization</a></li>
+                    <li><a href="#pages"><i class="fas fa-file-lines"></i> Page Structure</a></li>
+                    <li><a href="#credits"><i class="fas fa-award"></i> Credits</a></li>
+                    <li><a href="#changelog"><i class="fas fa-clock-rotate-left"></i> Changelog</a></li>
+                    <li><a href="#support"><i class="fas fa-headset"></i> Support</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- ================= MAIN CONTENT ================= -->
+        <main>
+            
+            <!-- Section: Introduction -->
+            <section id="introduction">
+                <div class="section-header">
+                    <h2>Introduction</h2>
+                </div>
+                <div class="doc-card">
+                    <p>Welcome to the <strong>Eleganza Calligraphy & Wedding Invitations</strong> website documentation. This guide is designed to help you set up, customize, and maintain your premium calligraphy invitation website efficiently.</p>
+                    <div class="info-box">
+                        <strong>Project Goal:</strong> To provide a sophisticated digital presence for artisanal calligraphy studios, focused on luxury aesthetics and high-end client conversion.
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section: Installation Guide -->
+            <section id="installation">
+                <div class="section-header">
+                    <h2>Installation Guide</h2>
+                </div>
+                <div class="doc-card">
+                    <h3>1. Local Setup</h3>
+                    <p>Running the template locally for development is straightforward since it uses standard HTML5/CSS3/JS.</p>
+                    <ol style="margin-left: 1.5rem; margin-top: 1rem;">
+                        <li>Extract the <code>.zip</code> package to your desired location.</li>
+                        <li>Open the folder in a code editor (VS Code recommended).</li>
+                        <li>Right-click <code>index.html</code> and select <strong>"Open with Live Server"</strong> or simply double-click the file to view it in your browser.</li>
+                    </ol>
+
+                    <h3 style="margin-top: 2rem;">2. Hosting & Deployment</h3>
+                    <p>To deploy the site to a live server, follow these hosting options:</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Option</th>
+                                <th>Difficulty</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>GitHub Pages</td>
+                                <td>Easy</td>
+                                <td>Push folder to GitHub repo and enable Pages in settings.</td>
+                            </tr>
+                            <tr>
+                                <td>Netlify / Vercel</td>
+                                <td>Easy</td>
+                                <td>Drag and drop the folder into their dashboard.</td>
+                            </tr>
+                            <tr>
+                                <td>CPanel / FTP</td>
+                                <td>Moderate</td>
+                                <td>Upload all files to the <code>public_html</code> directory via FileZilla.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Section: Folder Structure -->
+            <section id="structure">
+                <div class="section-header">
+                    <h2>Folder Structure</h2>
+                </div>
+                <div class="doc-card">
+                    <p>Understanding the file organization is key to quick customization.</p>
+                    <div class="folder-tree" style="margin-top: 1rem;">
+                        <div class="folder-item">📂 <strong>root/</strong></div>
+                        <div class="folder-item"> &nbsp; 📁 <strong>css/</strong> <span class="badge">Core Styles</span></div>
+                        <div class="folder-item"> &nbsp; 📁 <strong>js/</strong> <span class="badge">Interactivity</span></div>
+                        <div class="folder-item"> &nbsp; 📁 <strong>images/</strong> <span class="badge">Assets</span></div>
+                        <div class="folder-item"> &nbsp; 📁 <strong>documentation/</strong> <span class="badge">This Guide</span></div>
+                        <div class="folder-item"> &nbsp; 📄 <strong>index.html</strong> <span class="badge">Home Page</span></div>
+                        <div class="folder-item"> &nbsp; 📄 <strong>collections.html</strong> <span class="badge">Product Gallery</span></div>
+                        <div class="folder-item"> &nbsp; 📄 <strong>portfolio.html</strong> <span class="badge">Work Showcase</span></div>
+                        <div class="folder-item"> &nbsp; 📄 <strong>services.html</strong> <span class="badge">Design Packages</span></div>
+                        <div class="folder-item"> &nbsp; 📄 <strong>pricing.html</strong> <span class="badge">Investment</span></div>
+                        <div class="folder-item"> &nbsp; 📄 <strong>contact.html</strong> <span class="badge">Booking Page</span></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section: Customization Guide -->
+            <section id="customization">
+                <div class="section-header">
+                    <h2>Customization Guide</h2>
+                </div>
+                <div class="doc-card">
+                    <h3>1. Branding & Colors</h3>
+                    <p>Change global colors in the CSS variables block found at the top of <code>css/style.css</code> (or the main style sheet).</p>
+                    <pre>
+/* TODO: Replace brand colors below */
+:root {
+    --primary-color: #0f1113; /* Background */
+    --accent-color: #d4af37;  /* Brand Gold */
+    --text-color: #ffffff;    /* Primary Text */
+}</pre>
+
+                    <h3 style="margin-top: 2rem;">2. Typography</h3>
+                    <p>The template uses Google Fonts. To change them, replace the links in the <code>&lt;head&gt;</code> of all HTML files:</p>
+                    <pre>
+&lt;!-- TODO: Replace Google Font Link --&gt;
+&lt;link href="https://fonts.googleapis.com/css2?family=YOUR_FONT" rel="stylesheet"&gt;</pre>
+
+                    <h3 style="margin-top: 2rem;">3. Content Replacement</h3>
+                    <p>All text areas are marked with <code>&lt;!-- Content --&gt;</code> tags. To swap images, place your new images in the <code>/images</code> folder and update the <code>img src</code> attributes.</p>
+                </div>
+            </section>
+
+            <!-- Section: Page Structure -->
+            <section id="pages">
+                <div class="section-header">
+                    <h2>Page Structure</h2>
+                </div>
+                <div class="doc-card">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Page</th>
+                                <th>Core Sections</th>
+                                <th>Purpose</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Home</td>
+                                <td>Hero, Signature Styles, RSVP CTA, Testimonials</td>
+                                <td>Brand awareness and initial hook.</td>
+                            </tr>
+                            <tr>
+                                <td>Collections</td>
+                                <td>Grid View, Filter by Style (Modern, Classic, Floral)</td>
+                                <td>Displaying pre-designed invitation suites.</td>
+                            </tr>
+                            <tr>
+                                <td>Portfolio</td>
+                                <td>Full-width imagery, Custom commissions breakdown</td>
+                                <td>High-level craftsmanship showcase.</td>
+                            </tr>
+                            <tr>
+                                <td>Pricing</td>
+                                <td>Three-tier comparison, Add-ons list</td>
+                                <td>Transparent investment information.</td>
+                            </tr>
+                            <tr>
+                                <td>Contact</td>
+                                <td>Inquiry form, Studio map, Availability calendar</td>
+                                <td>Lead generation and booking.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Section: Credits -->
+            <section id="credits">
+                <div class="section-header">
+                    <h2>Credits & Resources</h2>
+                </div>
+                <div class="doc-card">
+                    <ul style="list-style: disc; margin-left: 1.5rem;">
+                        <li><strong>Google Fonts:</strong> Playfair Display & Inter.</li>
+                        <li><strong>Icons:</strong> Font Awesome 6.0 (Free License).</li>
+                        <li><strong>Images:</strong> Unsplash & Pexels (Artisanal Calligraphy collection).</li>
+                        <li><strong>JavaScript:</strong> AOS (Animate on Scroll) for entry animations.</li>
+                        <li><strong>Design Inspiration:</strong> Minimalist High-End Stationery.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Section: Changelog -->
+            <section id="changelog">
+                <div class="section-header">
+                    <h2>Changelog</h2>
+                </div>
+                <div class="doc-card">
+                    <div style="margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid var(--border-color);">
+                        <span class="badge badge-version">v1.1.0</span> <span style="margin-left: 10px; color: var(--text-muted);">April 2026</span>
+                        <ul style="margin-top: 0.5rem; margin-left: 1.5rem; list-style: circle;">
+                            <li>Added dark/light mode toggle system.</li>
+                            <li>Optimized image loading for better performance scores.</li>
+                            <li>Enhanced RSVP form validation.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <span class="badge">v1.0.0</span> <span style="margin-left: 10px; color: var(--text-muted);">March 2026</span>
+                        <ul style="margin-top: 0.5rem; margin-left: 1.5rem; list-style: circle;">
+                            <li>Initial commercial release.</li>
+                            <li>Core pages: Home, Collections, Contact, pricing.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section: Support -->
+            <section id="support">
+                <div class="section-header">
+                    <h2>Support</h2>
+                </div>
+                <div class="doc-card">
+                    <p>Need help with the template? Our team is available to assist you.</p>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 2rem;">
+                        <div class="doc-card" style="margin-bottom: 0; padding: 1.5rem; text-align: center;">
+                            <i class="fas fa-envelope" style="font-size: 2rem; color: var(--accent-color); margin-bottom: 1rem;"></i>
+                            <h4>Email Support</h4>
+                            <p>support@eleganza.studio</p>
+                        </div>
+                        <div class="doc-card" style="margin-bottom: 0; padding: 1.5rem; text-align: center;">
+                            <i class="fas fa-clock" style="font-size: 2rem; color: var(--accent-color); margin-bottom: 1rem;"></i>
+                            <h4>Response Time</h4>
+                            <p>Within 24-48 Hours</p>
+                        </div>
+                        <div class="doc-card" style="margin-bottom: 0; padding: 1.5rem; text-align: center;">
+                            <i class="fas fa-file-circle-question" style="font-size: 2rem; color: var(--accent-color); margin-bottom: 1rem;"></i>
+                            <h4>Customization Service</h4>
+                            <p>Paid services available</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- ================= JAVASCRIPT SECTION ================= -->
+    <script>
+        /**
+         * Progress Bar Logic
+         * Updates the width of the top progress bar based on scroll position
+         */
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById('progress-bar').style.width = scrolled + '%';
+        });
+
+        /**
+         * Sidebar Active State Observer
+         * Highlights the current section in the sidebar while scrolling
+         */
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-menu a');
+
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.3
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    navLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href').substring(1) === entry.target.id) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach(section => observer.observe(section));
+
+        /**
+         * Smooth Scroll for Sidebar Links
+         */
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                // For mobile, close sidebar on click (optional implementation)
+                // document.getElementById('sidebar').classList.remove('open');
+            });
+        });
+        
+        // Final sanity check for print
+        window.onbeforeprint = function() {
+            console.log("Preparing documentation for print...");
+        };
+    </script>
+</body>
+</html>
