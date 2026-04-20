@@ -109,12 +109,13 @@
     }
 
     .featured-collection-text {
-      background: var(--primary);
-      color: var(--secondary);
+      background: var(--secondary);
+      color: var(--primary);
       padding: 80px 60px;
       display: flex;
       flex-direction: column;
       justify-content: center;
+      border: 1px solid rgba(var(--accent-rgb), 0.1);
     }
 
     .featured-collection-text h2 {
@@ -294,7 +295,7 @@
     </div>
     <div class="process-steps">
       <div class="step reveal delay-1">
-        <div class="card-img-container" style="height:150px;margin-bottom:20px">
+        <div class="card-img-container" style="height:220px;margin-bottom:20px">
           <img
             src="https://shadicards.com/cdn/shop/articles/Sliding_b1e2f182-853f-4af2-9dd3-385bb2edd4b2_800x.png?v=1760439374"
             alt="Discover" class="card-img">
@@ -304,7 +305,7 @@
         <p>Browse our collections and find your aesthetic direction.</p>
       </div>
       <div class="step reveal delay-2">
-        <div class="card-img-container" style="height:150px;margin-bottom:20px">
+        <div class="card-img-container" style="height:220px;margin-bottom:20px">
           <img
             src="https://cdn0.weddingwire.in/article/5600/3_2/960/jpg/60065-personalised-wedding-cards-rohan-and-aparna-invitations-lead-image-1.jpeg"
             alt="Personalise" class="card-img">
@@ -314,7 +315,7 @@
         <p>Customise colours, fonts, wording and paper stock.</p>
       </div>
       <div class="step reveal delay-3">
-        <div class="card-img-container" style="height:150px;margin-bottom:20px">
+        <div class="card-img-container" style="height:220px;margin-bottom:20px">
           <img
             src="https://wishnwed-blog-media.s3.ap-southeast-1.amazonaws.com/wordpress/uploads/2024/07/personalize-wedding-invitation-cards.png"
             alt="Approve" class="card-img">
@@ -324,7 +325,7 @@
         <p>Review digital proofs until every detail is perfect.</p>
       </div>
       <div class="step reveal delay-4">
-        <div class="card-img-container" style="height:150px;margin-bottom:20px">
+        <div class="card-img-container" style="height:220px;margin-bottom:20px">
           <img
             src="https://goldleaf.co.in/wp-content/uploads/2018/02/Ghunjeet-Jaspreet-01-Invitations-India-Quality-Card-Collection-Personalised-Box-Invitation-By-Gold-Leaf-Design-Studios-New-Delhi.jpg"
             alt="Receive" class="card-img">
@@ -380,15 +381,13 @@
 
   <footer>
     <div class="footer-grid">
-      <div class="footer-brand"> <a href="index.html" class="logo">
-          <svg viewBox="0 0 100 100" class="logo-svg" fill="none" stroke="currentColor" stroke-width="2.5"
-            stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
-            <path d="M50 10 L90 50 L50 90 L10 50 Z" />
-            <path d="M35 45 Q 42 70 50 50 Q 58 30 65 55" stroke-width="5" />
-          </svg>
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <img src="https://w7.pngwing.com/pngs/67/171/png-transparent-wedding-logo-wedding-bride-groom-silhouette.png" alt="WEDINV Logo" class="logo-img">
           WED<span>INV</span>
         </a>
-        <p>Bespoke wedding stationery crafted with love and artistry.</p>
+        <p>Bespoke wedding stationery crafted with love and artistry. Every couple deserves paper that tells their
+          story.</p>
         <div class="footer-social">
           <a href="#" class="social-icon fb" title="Facebook">
             <svg viewBox="0 0 24 24" fill="currentColor">
@@ -423,15 +422,16 @@
           <li><a href="collections.html">Home 2</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="services.html">Services</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Company</h4>
         <ul>
           <li><a href="about.html">About Us</a></li>
-          <li><a href="contact.html">Reach Us</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="login.html">Login</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="login.html">Client Login</a></li>
+          <li><a href="#">FAQs</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -439,23 +439,20 @@
         <ul>
           <li><a href="#">hello@wedinv.com</a></li>
           <li><a href="#">+91 98765 43210</a></li>
+          <li><a href="#">Chennai, Tamil Nadu</a></li>
+          <li><a href="#">Mon–Sat, 10am–6pm</a></li>
         </ul>
       </div>
     </div>
-    <div class="footer-bottom"><span>© 2026 WedInv. All rights reserved.</span><span>Crafted with ♥ for love
-        stories</span></div>
+    <div class="footer-bottom">
+      <span>© 2026 WedInv. All rights reserved.</span>
+      <span>Crafted with ♥ for love stories</span>
+    </div>
   </footer>
 
   <button id="moveToTop" class="move-to-top" title="Go to top">↑</button>
+
   <script src="js/main.js"></script>
-  <script>
-    document.querySelectorAll('.filter-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-      });
-    });
-  </script>
 </body>
 
 </html>

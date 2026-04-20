@@ -152,9 +152,9 @@ body {
 
 .nav-links a {
   font-family: var(--font-body);
-  font-size: 0.78rem;
-  font-weight: 400;
-  letter-spacing: 0.18em;
+  font-size: 0.82rem; /* slightly increased from 0.78 */
+  font-weight: 500; /* increased from 400 */
+  letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--primary);
   text-decoration: none;
@@ -227,9 +227,9 @@ body {
 
 .btn-theme {
   background: none;
-  border: 1px solid rgba(var(--accent-rgb), 0.4);
-  width: 36px;
-  height: 36px;
+  border: 1.5px solid var(--primary); /* increased border thickness */
+  width: 40px; /* slightly larger */
+  height: 40px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -237,7 +237,8 @@ body {
   cursor: pointer;
   color: var(--primary);
   transition: var(--transition);
-  font-size: 0.85rem;
+  font-size: 1rem; /* slightly larger */
+  font-weight: 600;
 }
 
 .btn-theme:hover {
@@ -252,10 +253,11 @@ body {
   justify-content: center;
   text-align: center;
   background: none;
-  border: 1px solid rgba(var(--accent-rgb), 0.4);
-  padding: 6px 18px;
+  border: 1.5px solid var(--primary); /* increased border thickness */
+  padding: 8px 22px; /* larger padding */
   border-radius: 2px;
-  font-size: 0.7rem;
+  font-size: 0.75rem; /* slightly larger */
+  font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   cursor: pointer;
@@ -735,9 +737,9 @@ section {
 }
 
 .testimonial-avatar {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
+  width: 110px;
+  height: 110px;
+  border-radius: 24px; /* Increased "radius" as requested, changed from 50% circle to rounded square for modern look */
   object-fit: cover;
   border: 1px solid var(--accent);
   padding: 4px;
@@ -909,12 +911,15 @@ section {
 }
 
 .about-features li {
-  font-size: 0.83rem;
-  padding: 10px 0;
+  font-size: 0.88rem;
+  padding: 12px 0;
   border-bottom: 1px solid rgba(var(--accent-rgb), 0.15);
   display: flex;
   align-items: center;
-  gap: 12px;
+  justify-content: flex-start; /* ensures left alignment */
+  text-align: left; /* ensures text starts in a line */
+  gap: 15px;
+  width: 100%;
 }
 
 .about-features li::before {
@@ -1032,10 +1037,15 @@ footer {
 .footer-col ul li a {
   font-size: 0.82rem;
   color: var(--primary);
-  opacity: 0.55;
+  opacity: 0.7; /* Balanced for both themes */
   text-decoration: none;
   transition: color 0.3s;
   letter-spacing: 0.05em;
+}
+
+[data-theme="light"] .footer-col ul li a {
+  opacity: 0.85; /* Increased from 0.55 for better visibility in light mode */
+  font-weight: 500;
 }
 
 .footer-col ul li a:hover {
@@ -1086,6 +1096,10 @@ footer {
   font-family: inherit;
   font-size: 0.88rem;
   transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+[data-theme="dark"] input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
 }
 
 .contact-form input:focus,
@@ -1806,8 +1820,9 @@ footer {
   padding: 22px 0;
   text-align: left;
   font-family: var(--font-display);
-  font-size: 1.1rem;
+  font-size: 1.2rem; /* increased from 1.1 */
   font-style: italic;
+  font-weight: 600; /* increased for better contrast */
   color: var(--primary);
   cursor: pointer;
   display: flex;
